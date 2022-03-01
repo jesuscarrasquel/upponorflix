@@ -66,7 +66,7 @@ export default function UpdateMovie() {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             // const product = { ...inputs, img: downloadURL, cat };
             // addProducts(dispatch, product);
-            console.log(downloadURL);
+            // console.log(downloadURL);
             setFiles((prev) => {
               return { ...prev, [item.label]: downloadURL };
             });
@@ -76,7 +76,6 @@ export default function UpdateMovie() {
       );
     });
   };
-  console.log(uploadMessage);
   const handleUpload = ({ video, img }) => {
     setLoading(true);
     upload([
@@ -112,7 +111,6 @@ export default function UpdateMovie() {
   };
 
   useEffect(() => {
-    console.log("first", uploaded);
     if (uploaded >= 2) {
       setLoading(false);
       setUploadMessage(true);

@@ -80,7 +80,6 @@ export default function NewMovie() {
       );
     });
   };
-  console.log(uploadMessage);
   const handleUpload = ({ video, img }) => {
     setLoading(true);
     upload([
@@ -90,10 +89,8 @@ export default function NewMovie() {
   };
 
   const handleClick = ({ title, desc, limit, genre, year }) => {
-    console.log("Click");
     const img = files.img;
     const video = files.video;
-    // console.log(video, img);
     dispatch(addIsLoading());
     try {
       dispatch(

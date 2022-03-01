@@ -13,7 +13,6 @@ import { useSelector } from "react-redux";
 export default function ListItem({ index, id }) {
   const [isHovered, setIsHovered] = useState(false);
   const moviesState = useSelector((state) => state.movie);
-  console.log(moviesState.movie);
   const [movie, setMovie] = useState({});
   useEffect(() => {
     let getMovie = moviesState.movie.find((item) => item.id === index);
