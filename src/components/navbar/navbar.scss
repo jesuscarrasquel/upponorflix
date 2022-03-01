@@ -1,0 +1,86 @@
+.navbar {
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+  &.scrolled {
+    background-color: var(--main-color);
+
+    .container {
+      .left {
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .container {
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+
+    .left {
+      display: flex;
+      align-items: flex-start;
+      h1 {
+        margin-right: 40px;
+        height: 45px;
+        color: rgb(202, 10, 10);
+        font-size: 30px;
+      }
+      span {
+        margin-left: 20px;
+        cursor: pointer;
+        color: #000000;
+        font-size: 20px;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      img {
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+      .icon {
+        margin: 0px 15px;
+        cursor: pointer;
+      }
+      .profile {
+        position: relative;
+
+        .options {
+          display: none;
+          transition: all 1s;
+          background-color: var(--main-color);
+          border-radius: 5px;
+          span {
+            padding: 10px 20px;
+          }
+
+          span {
+            padding: 10px;
+            cursor: pointer;
+          }
+        }
+
+        &:hover {
+          .options {
+            position: absolute;
+            display: flex !important;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
